@@ -4,8 +4,9 @@ function sleep(ms) {
 }
 
 async function main() {
+  let envVar = process.env.PRINT_VALUE;
   while(true) {
-    console.log("Microservices rock!");
+    console.log(`Microservices rock! ${envVar}`);
     await sleep(5000);
   }
 }
