@@ -8,6 +8,10 @@ WORKDIR /usr/src/app
 # package.json and package-lock.json
 COPY package*.json ./
 
+# Environment variables
+ARG PRINT_VALUE
+ENV PRINT_VALUE=$PRINT_VALUE
+
 # Install dependencies
 RUN npm install
 
